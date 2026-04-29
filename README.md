@@ -17,6 +17,27 @@ Főbb funkciók:
 - Időzítő funkció értesítéssel
 - Inaktivitás kezelése (5 perc után automatikus szüneteltetés)
 
+TELEPÍTÉSI ÚTMUTATÓ
+-------------------
+Ha a szükséges eszközök még nincsenek telepítve a gépen:
+
+Java Development Kit (JDK) 21 telepítése:
+1. Látogass el a https://www.oracle.com/java/technologies/downloads/ oldalra
+2. Töltsd le a Windows x64 Installer verziót (JDK 21)
+3. Futtasd a telepítőt és kövesd az utasításokat
+4. Ellenőrizd a telepítést: java -version
+
+Apache Maven telepítése:
+1. Látogass el a https://maven.apache.org/download.cgi oldalra
+2. Töltsd le a Binary zip archive fájlt
+3. Csomagold ki pl. C:\Program Files\Maven mappába
+4. Add hozzá a PATH környezeti változóhoz: C:\Program Files\Maven\bin
+5. Ellenőrizd a telepítést: mvn -version
+
+IntelliJ IDEA telepítése:
+1. Látogass el a https://www.jetbrains.com/idea/download/ oldalra
+2. Töltsd le a Community (ingyenes) verziót
+3. Futtasd a telepítőt és kövesd az utasításokat
 
 RENDSZERKÖVETELMÉNYEK
 ---------------------
@@ -124,6 +145,27 @@ Main features:
 - Timer function with notifications
 - Inactivity handling (automatic pause after 5 minutes)
 
+INSTALLATION GUIDE
+------------------
+If the required tools are not yet installed on your machine:
+
+Java Development Kit (JDK) 21 Installation:
+1. Visit https://www.oracle.com/java/technologies/downloads/
+2. Download the Windows x64 Installer version (JDK 21)
+3. Run the installer and follow the instructions
+4. Verify the installation: java -version
+
+Apache Maven Installation:
+1. Visit https://maven.apache.org/download.cgi
+2. Download the Binary zip archive file
+3. Extract it to e.g. C:\Program Files\Maven
+4. Add to the PATH environment variable: C:\Program Files\Maven\bin
+5. Verify the installation: mvn -version
+
+IntelliJ IDEA Installation:
+1. Visit https://www.jetbrains.com/idea/download/
+2. Download the Community (free) version
+3. Run the installer and follow the instructions
 
 SYSTEM REQUIREMENTS
 -------------------
