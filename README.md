@@ -82,67 +82,6 @@ hozható létre, amely Java telepítés nélkül is futtatható.
    DigitalisIdomero.exe
 
 
-PROJEKT STRUKTÚRA
------------------
-Szakdoga-Digitalis-Idomero-main/
-│
-├── pom.xml                          - Maven konfiguráció és függőségek
-├── config.properties                - Alkalmazás konfigurációs fájl
-├── timetracker.db                   - SQLite adatbázis fájl
-├── readme.txt                       - Ez a fájl
-│
-├── src/main/java/org/example/digitalisidomero/
-│   │
-│   ├── Launcher.java                - Alkalmazás belépési pontja
-│   ├── Main.java                    - Főosztály
-│   ├── module-info.java             - Java modul konfiguráció
-│   │
-│   ├── config/
-│   │   ├── AppConfig.java           - Alkalmazás konfiguráció kezelése
-│   │   └── Constants.java           - Alkalmazás konstansok
-│   │
-│   ├── database/
-│   │   ├── DatabaseConnection.java  - Adatbázis kapcsolat kezelése
-│   │   ├── DatabaseInitializer.java - Adatbázis táblák inicializálása
-│   │   └── dao/
-│   │       ├── ApplicationDAO.java  - Alkalmazás adatok kezelése
-│   │       ├── CategoryDAO.java     - Kategória adatok kezelése
-│   │       └── SessionDAO.java      - Munkamenet adatok kezelése
-│   │
-│   ├── model/
-│   │   ├── Application.java         - Alkalmazás adatmodell
-│   │   ├── Category.java            - Kategória adatmodell
-│   │   └── Session.java             - Munkamenet adatmodell
-│   │
-│   ├── monitor/
-│   │   ├── ActivityDetector.java    - Felhasználói inaktivitás figyelése
-│   │   ├── MonitorService.java      - Ablakfigyelés koordinálása
-│   │   └── WindowMonitor.java       - Aktív ablak lekérdezése (JNA)
-│   │
-│   ├── service/
-│   │   ├── CategoryService.java     - Kategória üzleti logika
-│   │   ├── ExportService.java       - CSV és Excel export
-│   │   ├── MonitorService.java      - Figyelési szolgáltatás
-│   │   ├── NotificationService.java - Értesítések kezelése
-│   │   ├── StatisticsService.java   - Statisztikák számítása
-│   │   ├── TimeLimitService.java    - Időkorlát kezelése
-│   │   └── TrackingService.java     - Nyomkövetési logika
-│   │
-│   ├── ui/
-│   │   ├── MainController.java      - Főképernyő kontroller
-│   │   ├── StatisticsController.java- Statisztika képernyő kontroller
-│   │   └── TimerController.java     - Időzítő képernyő kontroller
-│   │
-│   └── util/
-│       ├── DateUtils.java           - Dátum segédeszközök
-│       └── TimeFormatter.java       - Idő formázó segédeszközök
-│
-└── src/main/resources/org/example/digitalisidomero/
-    ├── main-view.fxml               - Főképernyő felület leíró
-    ├── statistics-view.fxml         - Statisztika képernyő felület leíró
-    ├── timer-view.fxml              - Időzítő képernyő felület leíró
-    ├── styles.css                   - Főstíluslap
-    └── statistics.css               - Statisztika oldal stíluslap
 
 
 FELHASZNÁLT TECHNOLÓGIÁK
@@ -250,67 +189,6 @@ created that runs without a Java installation.
    DigitalisIdomero.exe
 
 
-PROJECT STRUCTURE
------------------
-Szakdoga-Digitalis-Idomero-main/
-│
-├── pom.xml                          - Maven configuration and dependencies
-├── config.properties                - Application configuration file
-├── timetracker.db                   - SQLite database file
-├── readme.txt                       - This file
-│
-├── src/main/java/org/example/digitalisidomero/
-│   │
-│   ├── Launcher.java                - Application entry point
-│   ├── Main.java                    - Main class
-│   ├── module-info.java             - Java module configuration
-│   │
-│   ├── config/
-│   │   ├── AppConfig.java           - Application configuration management
-│   │   └── Constants.java           - Application constants
-│   │
-│   ├── database/
-│   │   ├── DatabaseConnection.java  - Database connection management
-│   │   ├── DatabaseInitializer.java - Database table initialization
-│   │   └── dao/
-│   │       ├── ApplicationDAO.java  - Application data access
-│   │       ├── CategoryDAO.java     - Category data access
-│   │       └── SessionDAO.java      - Session data access
-│   │
-│   ├── model/
-│   │   ├── Application.java         - Application data model
-│   │   ├── Category.java            - Category data model
-│   │   └── Session.java             - Session data model
-│   │
-│   ├── monitor/
-│   │   ├── ActivityDetector.java    - User inactivity detection
-│   │   ├── MonitorService.java      - Window monitoring coordination
-│   │   └── WindowMonitor.java       - Active window querying (JNA)
-│   │
-│   ├── service/
-│   │   ├── CategoryService.java     - Category business logic
-│   │   ├── ExportService.java       - CSV and Excel export
-│   │   ├── MonitorService.java      - Monitoring service
-│   │   ├── NotificationService.java - Notification management
-│   │   ├── StatisticsService.java   - Statistics calculation
-│   │   ├── TimeLimitService.java    - Time limit management
-│   │   └── TrackingService.java     - Tracking logic
-│   │
-│   ├── ui/
-│   │   ├── MainController.java      - Main screen controller
-│   │   ├── StatisticsController.java- Statistics screen controller
-│   │   └── TimerController.java     - Timer screen controller
-│   │
-│   └── util/
-│       ├── DateUtils.java           - Date utility tools
-│       └── TimeFormatter.java       - Time formatting utilities
-│
-└── src/main/resources/org/example/digitalisidomero/
-    ├── main-view.fxml               - Main screen UI descriptor
-    ├── statistics-view.fxml         - Statistics screen UI descriptor
-    ├── timer-view.fxml              - Timer screen UI descriptor
-    ├── styles.css                   - Main stylesheet
-    └── statistics.css               - Statistics page stylesheet
 
 
 TECHNOLOGIES USED
