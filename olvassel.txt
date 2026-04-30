@@ -1,0 +1,126 @@
+=============================================
+DIGITÁLIS IDŐMÉRŐ - OLVASÁSI ÚTMUTATÓ
+=============================================
+
+ALKALMAZÁS LEÍRÁSA
+------------------
+A Digitális Időmérő egy Windows alapú asztali alkalmazás, amely
+nyomon követi a felhasználó digitális eszközhasználatát. Az alkalmazás
+rögzíti az aktív ablakok használati idejét, statisztikákat készít,
+valamint időzítő funkcióval is rendelkezik.
+
+Főbb funkciók:
+- Aktív alkalmazások és ablakok figyelése
+- Használati idő rögzítése és kategorizálása
+- Napi és heti statisztikák megjelenítése
+- Adatok exportálása CSV és Excel formátumban
+- Időzítő funkció értesítéssel
+- Inaktivitás kezelése (5 perc után automatikus szüneteltetés)
+
+TELEPÍTÉSI ÚTMUTATÓ
+-------------------
+Ha a szükséges eszközök még nincsenek telepítve a gépen:
+
+Java Development Kit (JDK) 21 telepítése:
+1. Látogass el a https://www.oracle.com/java/technologies/downloads/ oldalra
+2. Töltsd le a Windows x64 Installer verziót (JDK 21)
+3. Futtasd a telepítőt és kövesd az utasításokat
+4. Ellenőrizd a telepítést: java -version
+
+Apache Maven telepítése:
+1. Látogass el a https://maven.apache.org/download.cgi oldalra
+2. Töltsd le a Binary zip archive fájlt
+3. Csomagold ki pl. C:\Program Files\Maven mappába
+4. Add hozzá a PATH környezeti változóhoz: C:\Program Files\Maven\bin
+5. Ellenőrizd a telepítést: mvn -version
+
+IntelliJ IDEA telepítése:
+1. Látogass el a https://www.jetbrains.com/idea/download/ oldalra
+2. Töltsd le a Community (ingyenes) verziót
+3. Futtasd a telepítőt és kövesd az utasításokat
+
+RENDSZERKÖVETELMÉNYEK
+---------------------
+- Operációs rendszer: Windows 10 vagy Windows 11 (64 bit)
+- Java Development Kit (JDK) 21 vagy újabb verzió
+- Apache Maven 3.8 vagy újabb verzió
+- Minimális RAM: 512 MB
+- Ajánlott RAM: 1 GB vagy több
+- Szabad lemezterület: minimum 200 MB
+
+
+A PROJEKT IMPORTÁLÁSA INTELLIJ IDEA-BA
+---------------------------------------
+1. Csomagold ki a zip fájlt egy tetszőleges mappába
+2. Nyisd meg az IntelliJ IDEA fejlesztői környezetet
+3. Válaszd a File > Open menüpontot
+4. Navigálj a kicsomagolt "Szakdoga-Digitalis-Idomero-main" mappába
+5. Kattints az OK gombra
+6. Az IntelliJ IDEA automatikusan felismeri a Maven projektet
+7. Várd meg amíg a Maven letölti a szükséges függőségeket
+   (ez első alkalommal néhány percet vehet igénybe)
+8. Ha a Maven szinkronizálás nem indul el automatikusan:
+   jobb klikk a pom.xml fájlra > Maven > Reload Project
+
+
+AZ ALKALMAZÁS FUTTATÁSA FEJLESZTŐI KÖRNYEZETBŐL
+-------------------------------------------------
+1. A projekt betöltése után keresd meg a Launcher.java osztályt:
+   src/main/java/org/example/digitalisidomero/Launcher.java
+2. Jobb klikk a fájlra > Run 'Launcher.main()'
+   VAGY
+   Nyisd meg a fájlt és kattints a zöld nyíl ikonra a szerkesztő mellett
+
+
+LEFORDÍTOTT JAR FÁJL LÉTREHOZÁSA
+---------------------------------
+1. Nyisd meg a terminált a projekt gyökérmappájában
+   (IntelliJ IDEA-ban: View > Tool Windows > Terminal)
+2. Futtasd le a következő parancsot:
+
+   mvn clean package
+
+3. A lefordított JAR fájl a target/ mappában jön létre:
+   target/DigitalisIdomero.jar
+
+
+EXE FÁJL ÉS FUTTATHATÓ MAPPA LÉTREHOZÁSA
+------------------------------------------
+A jpackage eszköz segítségével önálló, futtatható alkalmazásmappa
+hozható létre, amely Java telepítés nélkül is futtatható.
+
+1. Először futtasd le a JAR létrehozását:
+   mvn clean package
+
+2. Majd futtasd le a következő parancsot a projekt gyökérmappájában:
+
+   jpackage --input target --name DigitalisIdomero --main-jar DigitalisIdomero.jar --main-class org.example.digitalisidomero.Launcher --type app-image --win-console
+
+3. A parancs lefutása után létrejön egy "DigitalisIdomero" nevű mappa,
+   amelyben megtalálható az alkalmazás futtatható állománya.
+
+4. Az alkalmazás elindításához nyisd meg a mappát és futtasd:
+   DigitalisIdomero.exe
+
+
+
+
+FELHASZNÁLT TECHNOLÓGIÁK
+-------------------------
+- Java 21
+- JavaFX 21 (grafikus felhasználói felület)
+- SQLite (helyi adatbázis)
+- JNA / JNA-Platform 5.14.0 (Windows API hívások)
+- Apache POI 5.2.5 (Excel export)
+- Apache Maven (projekt menedzsment)
+- Log4j 2.22.1 (naplózás)
+
+
+MEGJEGYZÉSEK
+------------
+- Az alkalmazás kizárólag Windows operációs rendszeren működik,
+  mivel az aktív ablak figyeléséhez Windows API hívásokat használ (JNA).
+- Az adatok helyi SQLite adatbázisban tárolódnak (timetracker.db),
+  amely az alkalmazás első indításakor automatikusan létrejön.
+- Az alkalmazás fejlesztője: Sztányi György
+- Fejlesztői környezet: IntelliJ IDEA, Java 21, Maven
