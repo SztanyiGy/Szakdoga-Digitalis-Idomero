@@ -103,7 +103,16 @@ created that runs without a Java installation.
    DigitalisIdomero.exe
 
 
-
+SETTINGS REQUIRED FOR RUNNING THE EXE
+---------------------------------------
+If you only want to use the executable EXE (without a development environment):
+- Required: Java 21 or newer must be installed on your machine
+- The Java path must be added to the system PATH variable:
+  1. Find the Java installation folder, e.g.: C:\Program Files\Java\jdk-21\bin
+  2. Open: Control Panel > System > Advanced system settings >
+     Environment Variables
+  3. Under "System variables" find the "Path" variable
+  4. Click Edit > New, and add the path to the Java bin folder
 
 TECHNOLOGIES USED
 -----------------

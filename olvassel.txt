@@ -103,7 +103,16 @@ hozható létre, amely Java telepítés nélkül is futtatható.
    DigitalisIdomero.exe
 
 
-
+AZ EXE FUTTATÁSÁHOZ SZÜKSÉGES BEÁLLÍTÁSOK
+------------------------------------------
+Ha csak a futtatható EXE-t szeretnéd használni (fejlesztői környezet nélkül):
+- Szükséges: Java 21 vagy újabb verzió telepítve legyen a gépen
+- A Java elérési útvonalát hozzá kell adni a rendszer PATH változójához:
+  1. Keresd meg a Java telepítési mappáját, pl.: C:\Program Files\Java\jdk-21\bin
+  2. Nyisd meg: Vezérlőpult > Rendszer > Speciális rendszerbeállítások >
+     Környezeti változók
+  3. A "Rendszerváltozók" részben keresd meg a "Path" változót
+  4. Kattints Szerkesztés > Új, és add hozzá a Java bin mappa útvonalát
 
 FELHASZNÁLT TECHNOLÓGIÁK
 -------------------------
