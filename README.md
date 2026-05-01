@@ -113,7 +113,6 @@ Ha csak a futtatható EXE-t szeretnéd használni (fejlesztői környezet nélk�
      Környezeti változók
   3. A "Rendszerváltozók" részben keresd meg a "Path" változót
   4. Kattints Szerkesztés > Új, és add hozzá a Java bin mappa útvonalát
-  5. Kattints OK, majd nyiss egy új parancssori ablakot
 
 
 
@@ -252,7 +251,6 @@ If you only want to use the executable EXE (without a development environment):
      Environment Variables
   3. Under "System variables" find the "Path" variable
   4. Click Edit > New, and add the path to the Java bin folder
-  5. Click OK, then open a new command prompt window
 
 
 TECHNOLOGIES USED
